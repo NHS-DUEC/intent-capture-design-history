@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: NHS-DUEC/nhs-navigator-design-history
+  branch: main
+  base_url: https://nhs-navigator-cms-oauth-b17141f9b3f7.herokuapp.com
+
+media_folder: docs/images
+public_folder: /nhs-navigator-design-history/images
+
+collections:
+  - name: posts
+    label: Design history posts
+    folder: docs/posts
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime, default: "{{now}}" }
+      - { label: Description, name: description, widget: string, required: false }
+      - { label: Body, name: body, widget: markdown }
