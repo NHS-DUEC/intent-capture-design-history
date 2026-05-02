@@ -7,6 +7,7 @@ export default function (eleventyConfig) {
     dataTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
+    pathPrefix: '/nhs-navigator-design-history/',
     dir: {
       input: 'docs',
     },
