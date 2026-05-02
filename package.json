@@ -1,0 +1,26 @@
+{
+  "name": "nhs-navigator-design-history",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NHS-DUEC/nhs-navigator-design-history.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/NHS-DUEC/nhs-navigator-design-history/issues"
+  },
+  "homepage": "https://github.com/NHS-DUEC/nhs-navigator-design-history#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.5",
+    "@x-govuk/nhsuk-eleventy-plugin": "^1.2.1"
+  }
+}
