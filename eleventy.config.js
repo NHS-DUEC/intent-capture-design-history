@@ -4,6 +4,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(nhsukEleventyPlugin)
 
   eleventyConfig.addPassthroughCopy('docs/admin')
+  eleventyConfig.addPassthroughCopy({
+    'node_modules/decap-cms/dist/decap-cms.js': 'decap-cms/decap-cms.js',
+  })
 
   return {
     dataTemplateEngine: 'njk',
