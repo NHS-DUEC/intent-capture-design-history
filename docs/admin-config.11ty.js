@@ -20,6 +20,7 @@ export default class CmsConfig {
 local_backend: true
 
 site_url: ${siteUrl}
+display_url: ${siteUrl}/
 
 media_folder: docs/images
 public_folder: /nhs-navigator-design-history/images
