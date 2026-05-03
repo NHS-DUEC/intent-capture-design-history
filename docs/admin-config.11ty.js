@@ -21,6 +21,7 @@ local_backend: true
 
 site_url: ${siteUrl}
 display_url: ${siteUrl}/
+logo_url: /nhs-navigator-design-history/admin/nhs-logo.png
 
 media_folder: docs/images
 public_folder: /nhs-navigator-design-history/images
