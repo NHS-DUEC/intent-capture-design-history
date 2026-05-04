@@ -1,0 +1,33 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}User need {{ userNeedIds[page.fileSlug] | needId }} - {{ options.titleSuffix }}{% endblock %}
+
+{% block beforeContent %}
+  {{ nhsukBreadcrumb({
+    items: breadcrumbItems
+  }) if showBreadcrumbs }}
+{% endblock %}
+
+{% block content %}
+  {{ appDocumentHeader({
+    caption: "User need",
+    title: userNeedIds[page.fileSlug] | needId
+  }) }}
+
+  {% call appProseScope() %}
+    <p class="nhsuk-body-l">
+      As a <strong>{{ userType }}</strong>,
+      I need {{ need }}
+      so that {{ reason }}.
+    </p>
+
+    {% if acceptanceClauses | length %}
+      <h2 class="nhsuk-heading-m">This need has been met when</h2>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+        {% for clause in acceptanceClauses %}
+          <li>{{ clause }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endcall %}
+{% endblock %}

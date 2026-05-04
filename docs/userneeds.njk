@@ -1,0 +1,17 @@
+---
+title: User needs
+description: The user needs that the AI Navigation work is attempting to satisfy.
+permalink: /userneeds/
+---
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+  {{ appDocumentHeader({
+    title: title,
+    description: description
+  }) }}
+
+  {{ appDocumentList({
+    items: collections.userNeeds | userNeedsToItems
+  }) }}
+{% endblock %}

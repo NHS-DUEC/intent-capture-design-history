@@ -34,6 +34,42 @@ media_folder: docs/images
 public_folder: /images
 
 collections:
+  - name: user-types
+    label: User types
+    folder: docs/user-types
+    create: true
+    identifier_field: name
+    slug: "{{name}}"
+    format: json
+    extension: json
+    fields:
+      - { label: Name, name: name, widget: string }
+      - { label: Description, name: description, widget: string, required: false }
+
+  - name: user-needs
+    label: User needs
+    folder: docs/user-needs
+    create: true
+    identifier_field: need
+    slug: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}"
+    fields:
+      - label: User type
+        name: userType
+        widget: relation
+        collection: user-types
+        search_fields: [name]
+        value_field: name
+        display_fields: [name]
+        required: true
+      - { label: Need, name: need, widget: string, hint: "Complete the sentence: I need..." }
+      - { label: Reason, name: reason, widget: string, hint: "Complete the sentence: so that..." }
+      - label: Acceptance clauses
+        name: acceptanceClauses
+        widget: list
+        label_singular: Acceptance clause
+        hint: "Complete the sentence: this need has been met when..."
+        field: { label: Clause, name: clause, widget: string }
+
   - name: authors
     label: Authors
     folder: docs/authors
