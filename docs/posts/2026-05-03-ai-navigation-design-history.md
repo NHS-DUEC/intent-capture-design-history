@@ -4,6 +4,8 @@ date: 2026-05-04T00:57:00.000Z
 description: This post introduces the AI Navigation design history, explaining
   how the team will explore, test and document ways AI could help people find
   the right NHS service or support more easily and safely.
+author:
+  - Paul Smith
 layout: post
 ---
 We’re starting a new piece of work exploring how AI could help people find the right NHS service or support, first time.

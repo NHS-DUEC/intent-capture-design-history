@@ -1,0 +1,109 @@
+{% extends "layouts/base.njk" %}
+
+{% block head %}
+  {{ super() }}
+  <style>
+    .app-author-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .app-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .app-author__thumbnail {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 2px solid #d8dde0;
+    }
+
+    .app-author__name {
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .app-author__role {
+      color: #4c6272;
+      margin: 0;
+      font-size: 0.875em;
+    }
+  </style>
+{% endblock %}
+
+{% block beforeContent %}
+  {{ nhsukBreadcrumb({
+    items: breadcrumbItems
+  }) if showBreadcrumbs }}
+{% endblock %}
+
+{% block content %}
+  {{ appDocumentHeader({
+    caption: caption,
+    title: title,
+    date: date
+  }) }}
+
+  {% set resolvedAuthors = author | resolveAuthors(authors) %}
+
+  {% if resolvedAuthors | length %}
+    <div class="app-author-list nhsuk-u-reading-width">
+      {% for resolvedAuthor in resolvedAuthors %}
+        <div class="app-author">
+          {% if resolvedAuthor.thumbnail %}
+            <img
+              class="app-author__thumbnail"
+              src="{{ resolvedAuthor.thumbnail }}"
+              alt=""
+              aria-hidden="true"
+            >
+          {% endif %}
+          <div class="app-author__details">
+            <p class="app-author__name">{{ resolvedAuthor.name }}</p>
+            {% if resolvedAuthor.role %}
+              <p class="app-author__role">{{ resolvedAuthor.role }}</p>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {{ appMetadata({
+    date: date,
+    modified: modified,
+    tags: tags
+  }) }}
+
+  {% call appProseScope() %}
+    {{ nhsukImage({
+      classes: "app-image--full",
+      src: image.src,
+      alt: image.alt,
+      caption: image.caption | markdown("inline")
+    }) if image }}
+
+    {{ content }}
+  {% endcall %}
+
+  {% if showPagination %}
+    {% set previous = collections.navigation | eleventyNavigation(sectionKey or options.homeKey) | getPreviousNavigationItem(page.url) %}
+    {% set next = collections.navigation | eleventyNavigation(sectionKey or options.homeKey) | getNextNavigationItem(page.url) %}
+    {{ nhsukPagination({
+      classes: "nhsuk-u-reading-width",
+      previousUrl: previous.url if previous,
+      previousPage: previous.title if previous,
+      nextUrl: next.url if next,
+      nextPage: next.title if next
+    }) }}
+  {% endif %}
+
+  {{ appRelated(related) if related }}
+{% endblock %}
