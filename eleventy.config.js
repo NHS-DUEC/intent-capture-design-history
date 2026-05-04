@@ -1,7 +1,17 @@
+import { createRequire } from 'node:module'
 import { nhsukEleventyPlugin } from '@x-govuk/nhsuk-eleventy-plugin'
 
+const require = createRequire(import.meta.url)
+const { site } = require('./package.json')
+
 export default function (eleventyConfig) {
-  eleventyConfig.addPlugin(nhsukEleventyPlugin)
+  eleventyConfig.addPlugin(nhsukEleventyPlugin, {
+    header: {
+      logo: {
+        href: '/'
+      }
+    }
+  })
 
   eleventyConfig.addPassthroughCopy('docs/admin')
   eleventyConfig.addPassthroughCopy({ 'docs/images': 'images' })
@@ -19,7 +29,7 @@ export default function (eleventyConfig) {
     dataTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
-    pathPrefix: '/nhs-navigator-design-history/',
+    pathPrefix: `${site.pathPrefix}/`,
     dir: {
       input: 'docs',
     },

@@ -1,27 +1,34 @@
+import { createRequire } from 'node:module'
+
+const require = createRequire(import.meta.url)
+const { site } = require('../package.json')
+
+const [org] = site.repo.split('/')
+const productionUrl = `https://${org.toLowerCase()}.github.io${site.pathPrefix}`
+const localUrl = `http://localhost:8080${site.pathPrefix}`
+
 export default class CmsConfig {
   data() {
     return {
       permalink: 'admin/config.yml',
       eleventyExcludeFromCollections: true,
-    };
+    }
   }
 
   render() {
-    const siteUrl = process.env.GITHUB_ACTIONS
-      ? 'https://nhs-duec.github.io/nhs-navigator-design-history'
-      : 'http://localhost:8080/nhs-navigator-design-history';
+    const siteUrl = process.env.GITHUB_ACTIONS ? productionUrl : localUrl
 
     return `backend:
   name: github
-  repo: NHS-DUEC/nhs-navigator-design-history
+  repo: ${site.repo}
   branch: main
-  base_url: https://nhs-navigator-cms-oauth-b17141f9b3f7.herokuapp.com
+  base_url: ${site.oauthBaseUrl}
 
 local_backend: true
 
 site_url: ${siteUrl}
 display_url: ${siteUrl}/
-logo_url: /nhs-navigator-design-history/admin/nhs-logo.png
+logo_url: ${site.pathPrefix}/admin/nhs-logo.png
 
 media_folder: docs/images
 public_folder: /images
@@ -63,6 +70,6 @@ collections:
         multiple: true
       - { label: Layout, name: layout, widget: hidden, default: post }
       - { label: Body, name: body, widget: markdown }
-`;
+`
   }
 }

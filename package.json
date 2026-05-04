@@ -21,6 +21,11 @@
     "url": "https://github.com/NHS-DUEC/nhs-navigator-design-history/issues"
   },
   "homepage": "https://github.com/NHS-DUEC/nhs-navigator-design-history#readme",
+  "site": {
+    "repo": "NHS-DUEC/nhs-navigator-design-history",
+    "pathPrefix": "/nhs-navigator-design-history",
+    "oauthBaseUrl": "https://nhs-navigator-cms-oauth-b17141f9b3f7.herokuapp.com"
+  },
   "dependencies": {
     "@11ty/eleventy": "^3.1.5",
     "@x-govuk/nhsuk-eleventy-plugin": "^1.2.1",

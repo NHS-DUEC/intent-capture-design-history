@@ -8,13 +8,13 @@ author:
   - Paul Smith
 layout: post
 ---
-We’re starting a new piece of work exploring how AI could help people find the right NHS service or support, first time.
+We're starting a new piece of work exploring how AI could help people find the right NHS service or support, first time.
 
-The problem we’re looking at is familiar but difficult. People often come to the NHS with a need, a worry, a symptom or a question, but they do not necessarily know where that need fits within the structure of the NHS.
+The problem we're looking at is familiar but difficult. People often come to the NHS with a need, a worry, a symptom or a question, but they do not necessarily know where that need fits within the structure of the NHS.
 
-They may not know whether they need [111 online](https://111.nhs.uk/), [NHS 111 by phone](https://www.england.nhs.uk/urgent-emergency-care/nhs-111/), a [GP](https://www.nhs.uk/nhs-services/gps/), [pharmacy](https://www.nhs.uk/nhs-services/pharmacies/), [urgent treatment centre](https://www.england.nhs.uk/urgent-emergency-care/urgent-treatment-centres/), [A&E](https://www.nhs.uk/nhs-services/urgent-and-emergency-care-services/find-urgent-and-emergency-care-services/), self-care advice, [mental health support](https://www.nhs.uk/nhs-services/mental-health-services/), [sexual health services](https://www.nhs.uk/nhs-services/sexual-health-services/), or something else entirely.
+They may not know whether they need [111 online](https://111.nhs.uk/), a [GP](https://www.nhs.uk/nhs-services/gps/), [pharmacy](https://www.nhs.uk/nhs-services/pharmacies/), [urgent treatment centre](https://www.england.nhs.uk/urgent-emergency-care/urgent-treatment-centres/), [A&E](https://www.nhs.uk/nhs-services/urgent-and-emergency-care-services/find-urgent-and-emergency-care-services/), [sexual health services](https://www.nhs.uk/nhs-services/sexual-health-services/), or something else entirely.
 
-The NHS is organised around services, pathways and clinical responsibilities. People are organised around what is happening to them.
+Although the NHS is organised by clinical pathways, services, and responsibilities, individuals typically perceive and navigate the system based on their own personal experiences and needs.
 
 This work is about closing that gap.
 
@@ -26,19 +26,19 @@ The aim is not to create a clinical conversation or replace existing NHS service
 
 That might mean helping someone:
 
-- understand whether they need urgent help
-- find the most appropriate NHS service
-- move into an existing pathway, such as [111 online](https://111.nhs.uk/)
-- find trusted health information, such as [Health A to Z](https://www.nhs.uk/conditions/)
-- find local services using [NHS services near you](https://www.nhs.uk/nhs-services/services-near-you/)
-- understand what the AI navigation service can and cannot do
-- leave the service safely if it is not helping them
+* understand whether they need urgent help
+* find the most appropriate NHS service
+* move into an existing pathway, such as 111 online
+* find trusted health information, such as [Health A to Z](https://www.nhs.uk/conditions/)
+* find local services using [NHS services near you](https://www.nhs.uk/nhs-services/services-near-you/)
+* understand what the AI navigation service can and cannot do
+* leave the service safely if it is not helping them
 
 ## Why this matters
 
 At the moment, people often need to understand the structure of the NHS before they can successfully use it.
 
-They may need to know the difference between [111 online](https://111.nhs.uk/), [NHS 111 by phone](https://www.england.nhs.uk/urgent-emergency-care/nhs-111/), a GP, pharmacy, A&E, urgent treatment centres, service finders, [Health A to Z](https://www.nhs.uk/conditions/) content and local services.
+They may need to know the difference between 111 online, [NHS 111 by phone](https://www.england.nhs.uk/urgent-emergency-care/nhs-111/), a GP, pharmacy, A&E, urgent treatment centres, service finders, Health A to Z content and local services.
 
 That is a lot to expect from someone who may be worried, unwell, caring for someone else or under pressure.
 
@@ -56,15 +56,15 @@ It is:
 
 That raises a wider set of design questions:
 
-- Where should this service appear?
-- How should people enter it?
-- How do we explain what it can and cannot do?
-- How do we make the use of AI transparent?
-- How do we identify emergencies quickly?
-- How do we avoid creating loops between services?
-- How do we connect safely with existing NHS pathways?
-- How do we measure whether the outcome was useful?
-- How do we make sure people always have a non-AI route?
+* Where should this service appear?
+* How should people enter it?
+* How do we explain what it can and cannot do?
+* How do we make the use of AI transparent?
+* How do we identify emergencies quickly?
+* How do we avoid creating loops between services?
+* How do we connect safely with existing NHS pathways?
+* How do we measure whether the outcome was useful?
+* How do we make sure people always have a non-AI route?
 
 ## Our design principles
 
@@ -92,7 +92,7 @@ Where someone needs urgent or emergency help, the service must make that clear a
 
 This work needs to connect into existing services, standards, content, clinical safety processes and operational realities.
 
-It should support services such as [111 online](https://111.nhs.uk/), [NHS services near you](https://www.nhs.uk/nhs-services/services-near-you/), [Health A to Z](https://www.nhs.uk/conditions/) and, where relevant, professional tools such as [NHS Service Finder](https://digital.nhs.uk/services/nhs-service-finder).
+It should support services such as 111 online, NHS services near you, Health A to Z and, where relevant, professional tools such as [NHS Service Finder](https://digital.nhs.uk/services/nhs-service-finder).
 
 ### The service should be inclusive from the start
 
@@ -110,12 +110,12 @@ A [design history](https://govuk-design-history.x-govuk.org/introduction/) helps
 
 This design history will record:
 
-- the questions we ask
-- the assumptions we test
-- the decisions we make
-- the risks and constraints we identify
-- the things we learn from users, stakeholders and subject matter experts
-- where our thinking changes
+* the questions we ask
+* the assumptions we test
+* the decisions we make
+* the risks and constraints we identify
+* the things we learn from users, stakeholders and subject matter experts
+* where our thinking changes
 
 We expect the work to cover interaction design, content design, service design, user research, product thinking, clinical safety, governance, policy and technical exploration.
 
@@ -126,17 +126,3 @@ That is the point of recording the work as we go.
 AI navigation is not just a new interface pattern. It asks bigger questions about how people find help, how the NHS presents itself, how trust is built, and how we design responsibly when the technology is still emerging.
 
 This design history is a place to make that thinking visible.
-
-## Useful references
-
-- [What is a design history?](https://govuk-design-history.x-govuk.org/introduction/)
-- [Why and how we create design histories](https://dfedigital.blog.gov.uk/2020/09/01/design-history/)
-- [Making the most of design histories](https://dfedigital.blog.gov.uk/2024/12/04/making-the-most-of-design-histories/)
-- [111 online](https://111.nhs.uk/)
-- [NHS 111](https://www.england.nhs.uk/urgent-emergency-care/nhs-111/)
-- [When to use NHS 111 online or call 111](https://www.nhs.uk/nhs-services/urgent-and-emergency-care-services/when-to-use-111/)
-- [Find urgent and emergency care services](https://www.nhs.uk/nhs-services/urgent-and-emergency-care-services/find-urgent-and-emergency-care-services/)
-- [Urgent treatment centres](https://www.england.nhs.uk/urgent-emergency-care/urgent-treatment-centres/)
-- [NHS services near you](https://www.nhs.uk/nhs-services/services-near-you/)
-- [Health A to Z](https://www.nhs.uk/conditions/)
-- [NHS Service Finder](https://digital.nhs.uk/services/nhs-service-finder)
