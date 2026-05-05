@@ -1,0 +1,7 @@
+@use "pkg:@x-govuk/nhsuk-eleventy-plugin";
+@use "pkg:nhsuk-frontend/lib/highlighter/styles";
+
+.nhsuk-card-group__item:last-child .nhsuk-card--secondary {
+  box-shadow: none;
+  border-bottom: 0;
+}

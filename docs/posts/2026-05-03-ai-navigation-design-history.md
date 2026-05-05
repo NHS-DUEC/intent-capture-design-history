@@ -1,9 +1,9 @@
 ---
-title: AI Navigation design history
+title: NHS Navigator design history
 date: 2026-05-04T00:57:00.000Z
-description: This post introduces the AI Navigation design history, explaining
-  how the team will explore, test and document ways AI could help people find
-  the right NHS service or support more easily and safely.
+description: This post introduces the design history, explaining how the team
+  will explore, test and document ways AI could help people find the right NHS
+  service or support more easily and safely.
 author:
   - Paul Smith
 layout: post

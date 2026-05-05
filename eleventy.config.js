@@ -6,9 +6,16 @@ const { site } = require('./package.json')
 
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(nhsukEleventyPlugin, {
+    stylesheets: ['/assets/application.css'],
     header: {
       logo: {
         href: '/'
+      },
+      navigation: {
+        items: [
+          { text: 'Home', href: '/' },
+          { text: 'User needs', href: '/userneeds/' }
+        ]
       }
     }
   })
@@ -38,7 +45,7 @@ export default function (eleventyConfig) {
           caption: id,
           title: `As a ${need.data.userType}, I need ${need.data.need} so that ${need.data.reason}.`,
           description: need.data.acceptanceClauses?.length
-            ? `Met when: ${need.data.acceptanceClauses.join('; ')}.`
+            ? `This need has been met when: ${need.data.acceptanceClauses.join('; ')}.`
             : undefined
         }
       })

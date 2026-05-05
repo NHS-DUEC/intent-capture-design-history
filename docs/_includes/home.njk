@@ -1,0 +1,30 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+
+  {{
+    appDocumentHeader({
+        caption: caption,
+        title: title,
+        description: description
+    })
+  }}
+
+  {{
+    appDocumentList({
+        headingLevel: 2,
+        items: collections.posts | reverse | sliceFromCollection(10)
+    })
+  }}
+
+  {{
+    appRelated({
+        title: "All posts",
+        items: [{
+            text: "View all posts",
+            href: "/posts/"
+        }]
+    })
+  }}
+
+{% endblock %}
