@@ -5,13 +5,41 @@ permalink: /userneeds/
 ---
 {% extends "layouts/base.njk" %}
 
+{% from "nhsuk/components/tables/macro.njk" import table as nhsukTable %}
+
 {% block content %}
   {{ appDocumentHeader({
     title: title,
     description: description
   }) }}
 
-  {{ appDocumentList({
-    items: collections.userNeeds | userNeedsToItems
+  {% set tableRows = [] %}
+  {% for need in collections.userNeeds | sort(false, true, 'page.fileSlug') %}
+    {% set clausesHtml %}
+      {% if need.data.acceptanceClauses | length %}
+        <ul class="nhsuk-list nhsuk-list--bullet nhsuk-u-margin-bottom-0">
+          {% for clause in need.data.acceptanceClauses %}
+            <li>{{ clause }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endset %}
+    {% set tableRows = tableRows.concat([[
+      { text: need.data.userType },
+      { text: need.data.need },
+      { text: need.data.reason },
+      { html: clausesHtml }
+    ]]) %}
+  {% endfor %}
+
+  {{ nhsukTable({
+    responsive: true,
+    head: [
+      { text: "As a" },
+      { text: "I need" },
+      { text: "So that" },
+      { text: "Satisfied when" }
+    ],
+    rows: tableRows
   }) }}
 {% endblock %}
