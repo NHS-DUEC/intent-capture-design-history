@@ -52,6 +52,7 @@ collections:
     create: true
     identifier_field: need
     slug: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}"
+    summary: "{{fields.userType}} — {{fields.need}}"
     fields:
       - label: User type
         name: userType
