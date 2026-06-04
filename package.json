@@ -1,5 +1,5 @@
 {
-  "name": "nhs-navigator-design-history",
+  "name": "intent-capture-design-history",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,19 +11,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NHS-DUEC/nhs-navigator-design-history.git"
+    "url": "git+https://github.com/NHS-DUEC/intent-capture-design-history.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "bugs": {
-    "url": "https://github.com/NHS-DUEC/nhs-navigator-design-history/issues"
+    "url": "https://github.com/NHS-DUEC/intent-capture-design-history/issues"
   },
-  "homepage": "https://github.com/NHS-DUEC/nhs-navigator-design-history#readme",
+  "homepage": "https://github.com/NHS-DUEC/intent-capture-design-history#readme",
   "site": {
-    "repo": "NHS-DUEC/nhs-navigator-design-history",
-    "pathPrefix": "/nhs-navigator-design-history",
+    "repo": "NHS-DUEC/intent-capture-design-history",
+    "pathPrefix": "/intent-capture-design-history",
     "oauthBaseUrl": "https://nhs-navigator-cms-oauth-b17141f9b3f7.herokuapp.com"
   },
   "dependencies": {
