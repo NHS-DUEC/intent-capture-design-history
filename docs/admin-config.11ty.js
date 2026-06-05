@@ -4,8 +4,12 @@ const require = createRequire(import.meta.url)
 const { site } = require('../package.json')
 
 const [org] = site.repo.split('/')
+// The pathPrefix only applies on GitHub Pages (project served from a subpath).
+// Locally the dev server runs at the root, so drop it there.
+const isProduction = Boolean(process.env.GITHUB_ACTIONS)
+const pathPrefix = isProduction ? site.pathPrefix : ''
 const productionUrl = `https://${org.toLowerCase()}.github.io${site.pathPrefix}`
-const localUrl = `http://localhost:8080${site.pathPrefix}`
+const localUrl = `http://localhost:8080${pathPrefix}`
 
 export default class CmsConfig {
   data() {
@@ -28,7 +32,7 @@ local_backend: true
 
 site_url: ${siteUrl}
 display_url: ${siteUrl}/
-logo_url: ${site.pathPrefix}/admin/nhs-logo.png
+logo_url: ${pathPrefix}/admin/nhs-logo.png
 
 media_folder: docs/images
 public_folder: /images

@@ -31,7 +31,7 @@ That might mean helping someone:
 * move into an existing pathway, such as 111 online
 * find trusted health information, such as [Health A to Z](https://www.nhs.uk/conditions/)
 * find local services using [NHS services near you](https://www.nhs.uk/nhs-services/services-near-you/)
-* understand what the AI navigation service can and cannot do
+* understand what the Intent capture service can and cannot do
 * leave the service safely if it is not helping them
 
 ## Why this matters
@@ -74,7 +74,7 @@ As we begin, we are trying to hold a few principles in mind.
 
 It should reduce effort, not add another layer of complexity.
 
-The value of AI navigation is not that it uses AI. The value is whether it helps people get to the right place more easily than they can today.
+The value of Intent capture is not that it uses AI. The value is whether it helps people get to the right place more easily than they can today.
 
 ### The service should show its seams
 
@@ -123,6 +123,6 @@ Some of the questions will be practical. Some will be strategic. Some will be un
 
 That is the point of recording the work as we go.
 
-AI navigation is not just a new interface pattern. It asks bigger questions about how people find help, how the NHS presents itself, how trust is built, and how we design responsibly when the technology is still emerging.
+Intent capture is not just a new interface pattern. It asks bigger questions about how people find help, how the NHS presents itself, how trust is built, and how we design responsibly when the technology is still emerging.
 
 This design history is a place to make that thinking visible.

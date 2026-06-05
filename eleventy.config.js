@@ -55,7 +55,7 @@ export default function (eleventyConfig) {
     dataTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
-    pathPrefix: `${site.pathPrefix}/`,
+    pathPrefix: process.env.GITHUB_ACTIONS ? `${site.pathPrefix}/` : '/',
     dir: {
       input: 'docs',
     },
