@@ -1,5 +1,5 @@
 ---
-title: NHS Navigator design history
+title: NHS Intent capture design history
 date: 2026-05-04T00:57:00.000Z
 description: This post introduces the design history, explaining how the team
   will explore, test and document ways AI could help people find the right NHS
