@@ -8,10 +8,18 @@ permalink: /userneeds/
 {% from "nhsuk/components/tables/macro.njk" import table as nhsukTable %}
 
 {% block content %}
+
   {{ appDocumentHeader({
     title: title,
     description: description
   }) }}
+
+  <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, animi, eligendi commodi reprehenderit quod sed officia, magnam fugit et nulla quibusdam eaque quasi odio numquam voluptate! Amet voluptatibus obcaecati ipsum?</p>
+      </div>
+  </div>
+
 
   {% set tableRows = [] %}
   {% for need in collections.userNeeds | sort(false, true, 'page.fileSlug') %}
