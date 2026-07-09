@@ -111,20 +111,6 @@ collections:
         multiple: true
       - { label: Layout, name: layout, widget: hidden, default: post }
       - { label: Body, name: body, widget: markdown }
-
-  - name: decisions
-    label: Decision records
-    folder: docs/decisions
-    create: true
-    slug: "{{slug}}"
-    preview_path: decisions/{{slug}}
-    fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Description, name: description, widget: string, required: false }
-      - { label: Status, name: status, widget: select, options: [Proposed, Accepted, Superseded], default: Proposed }
-      - { label: Permalink, name: permalink, widget: string, required: false }
-      - { label: Layout, name: layout, widget: hidden, default: content-page }
-      - { label: Body, name: body, widget: markdown }
 `
   }
 }
