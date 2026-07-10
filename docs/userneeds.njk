@@ -16,10 +16,11 @@ permalink: /userneeds/
 
   <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-two-thirds">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, animi, eligendi commodi reprehenderit quod sed officia, magnam fugit et nulla quibusdam eaque quasi odio numquam voluptate! Amet voluptatibus obcaecati ipsum?</p>
+          <p>User needs describe what people need from the service in order to make progress safely and confidently. They are not the same as intents. A user need describes the outcome a person needs; an intent describes what they are trying to do or express at a particular point in the journey.</p>
+
+          <p>For this work, user needs help keep the design grounded in people’s goals rather than NHS service structures. They should be reviewed as the team learns more from research, pilots and operational evidence.</p>
       </div>
   </div>
-
 
   {% set tableRows = [] %}
   {% for need in collections.userNeeds | sort(false, true, 'page.fileSlug') %}
