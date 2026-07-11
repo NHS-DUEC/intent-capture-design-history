@@ -7,6 +7,13 @@ permalink: /concepts/architecture/
 
 This page describes the emerging architecture view for AI Intent Capture. It is not a final technical architecture. It is a working model to support design, product, clinical safety and technical discussion.
 
+Related pages:
+
+- [Concepts](/concepts/) defines the core ideas used here.
+- [Glossary and terminology history](/concepts/glossary/) gives shorter working definitions.
+- [Claims and evidence index](/evidence/claims/) records which architecture claims still need evidence.
+- [Assumptions register](/evidence/assumptions/) records assumptions that affect the architecture.
+
 ## Working architecture position
 
 Intent Capture should be treated as a capability within a wider access, triage and navigation system.
@@ -68,11 +75,15 @@ Intent Capture should not own:
 - the whole user journey after handover
 - the full orchestration layer
 
+See the decision record [Intent Capture is not triage](/decisions/001-intent-capture-is-not-triage/) for the current scope boundary.
+
 ## Relationship to orchestration
 
 Intent Capture can provide one input into orchestration. Orchestration is broader. It coordinates movement between services, channels, rules, pathways and responsibilities.
 
 The same captured intent may need different routes depending on factors such as urgency, age, location, service availability, accessibility needs and whether the user is seeking help for themselves or someone else.
+
+This is currently recorded as a claim and assumption in the [claims and evidence index](/evidence/claims/) and [assumptions register](/evidence/assumptions/).
 
 ## Relationship to existing services
 
@@ -105,3 +116,5 @@ This model creates several design implications:
 - How should clinical safety responsibilities be divided across the journey?
 - How should the system handle ambiguity, conflicting signals or insufficient information?
 - What should be logged for evaluation without over-collecting personal information?
+
+Open questions should be reviewed against the [roadmap](/roadmap/) and added to the [assumptions register](/evidence/assumptions/) where they affect design or delivery choices.
