@@ -19,26 +19,30 @@ These foundations are now in place:
 - core concepts have working definitions
 - an initial evidence page exists
 - the evolution from AI Navigation to Intent Capture has been documented
+- the [programme timeline](/timeline/) has been added
+- the [glossary and terminology history](/concepts/glossary/) has been added
+- the [claims and evidence index](/evidence/claims/) and [assumptions register](/evidence/assumptions/) have been added
+- the [architecture page](/concepts/architecture/) has been added
 
 ## Now
 
-Focus on making the design history more traceable and easier to challenge.
+Focus on improving traceability and keeping the new sections connected.
 
-- Add a programme timeline from May 2026 onwards.
-- Add a glossary and terminology history.
-- Improve the evidence index so claims point to supporting artefacts.
-- Add an assumptions register.
-- Add an architecture page showing how Intent Capture relates to navigation, orchestration and onward services.
+- Link timeline entries to specific posts, decision records and evidence entries.
+- Add stronger source references to the [claims and evidence index](/evidence/claims/).
+- Review the [assumptions register](/evidence/assumptions/) with product, clinical safety and technical stakeholders.
+- Add decision records for non-AI routes, safe handover, emergency presentations and structured intent.
+- Add a post explaining the relationship between Intent Capture, Intelligent Navigation and Unified Access.
 
 ## Next
 
 Focus on making the design history more useful for product, clinical safety and technical discussions.
 
-- Add a post explaining the relationship between Intent Capture, Intelligent Navigation and Unified Access.
-- Add decision records for non-AI routes, safe handover, emergency presentations and structured intent.
 - Add a research backlog organised by assumption, risk and evidence gap.
 - Add a meeting and artefact index.
 - Add diagrams for ecosystem relationships and service boundaries.
+- Add example structured intent payloads linked from the [architecture page](/concepts/architecture/).
+- Add links from relevant posts to the [glossary](/concepts/glossary/), [timeline](/timeline/) and [decision records](/decisions/).
 
 ## Later
 
