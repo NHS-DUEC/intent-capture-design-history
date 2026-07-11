@@ -9,6 +9,13 @@ This timeline records the main shifts in the AI Intent Capture work. It is inten
 
 It should be treated as a living artefact. Dates may be refined as more meeting notes, research outputs and decisions are added to the design history.
 
+Related pages:
+
+- [Design history posts](/posts/) provide the chronological narrative.
+- [Decision records](/decisions/) capture material choices made through the work.
+- [Claims and evidence index](/evidence/claims/) tracks the strength of important claims.
+- [Roadmap](/roadmap/) describes the next documentation priorities.
+
 ## May 2026
 
 ### Initial framing as AI Navigation
@@ -16,6 +23,8 @@ It should be treated as a living artefact. Dates may be refined as more meeting 
 The work began with a broad question: how might AI help people find the right NHS service or support more easily and safely?
 
 This framing was useful because it located the problem in navigation rather than in a single existing service. It helped open up questions about service boundaries, user language, NHS structure and the role of AI.
+
+See also [Glossary and terminology history](/concepts/glossary/) for how this term changed.
 
 ### First design history post
 
@@ -25,7 +34,7 @@ It also set out early design principles, including that the service should be us
 
 ### User needs and user types
 
-The repository began to capture user needs and user types. This created an early structure for thinking about who the work is for and what outcomes the service should support.
+The repository began to capture [user needs](/userneeds/) and user types. This created an early structure for thinking about who the work is for and what outcomes the service should support.
 
 ## June 2026
 
@@ -35,11 +44,13 @@ As the work developed, the term AI Navigation began to feel too broad. It descri
 
 Intent Capture became a more useful term because it focused attention on understanding what a person is trying to do, express, resolve or understand before moving them into an appropriate route or pathway.
 
+See [Glossary and terminology history](/concepts/glossary/) and [Concepts](/concepts/) for the current working definitions.
+
 ### Scope boundary with triage
 
 A clearer boundary emerged between Intent Capture and triage. Intent Capture may identify that someone needs a triage route, but it should not itself be treated as clinical assessment unless explicitly designed, governed and assured as such.
 
-This became an important safety and governance distinction.
+This became an important safety and governance distinction. See the decision record [Intent Capture is not triage](/decisions/001-intent-capture-is-not-triage/).
 
 ### Taxonomy and typology work
 
@@ -53,6 +64,8 @@ The work began to consider where Intent Capture should appear and how placement 
 
 Criteria included learning potential, value, safety to fail, uncertainty and reversibility. The emphasis was on making scoring explicit so discussions focused on evidence and rationale rather than just numerical scores.
 
+See [Assumptions register](/evidence/assumptions/) and [Claims and evidence index](/evidence/claims/) for current evidence gaps.
+
 ## July 2026
 
 ### Foundation structure for the design history
@@ -65,9 +78,9 @@ This changed the repository from a simple design history into a more complete pr
 
 The first decision records captured three foundational design positions:
 
-- Intent Capture is not triage
-- use a conversation-first interaction model
-- show the seams of AI
+- [Intent Capture is not triage](/decisions/001-intent-capture-is-not-triage/)
+- [Use a conversation-first interaction model](/decisions/002-conversation-first-interaction/)
+- [Show the seams of AI](/decisions/003-show-the-seams-of-ai/)
 
 These records help make scope, safety and trust decisions explicit.
 
@@ -79,9 +92,16 @@ A dedicated post was added to explain the shift from AI Navigation to Intent Cap
 
 The next phase is to make the design history more traceable. That means connecting claims to evidence, recording assumptions, describing architecture and making relationships to wider access, triage and navigation work clearer.
 
+See:
+
+- [Architecture](/concepts/architecture/)
+- [Claims and evidence index](/evidence/claims/)
+- [Assumptions register](/evidence/assumptions/)
+- [Roadmap](/roadmap/)
+
 ## Known gaps
 
 - More exact dates are needed for some meetings, workshops and decisions.
-- The timeline should link to specific posts, decision records and evidence entries.
+- The timeline should link to specific posts, decision records and evidence entries as those sources are added.
 - Pilot and evaluation activity needs to be represented more clearly.
 - The relationship to NHS App, NHS.UK, NHS 111 online and Intelligent Navigation needs a dedicated timeline entry.
