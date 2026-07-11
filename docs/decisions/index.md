@@ -15,8 +15,27 @@ Each decision record should include:
 - consequences and trade-offs
 - unresolved questions, where relevant
 
+Related pages:
+
+- [Claims and evidence index](/evidence/claims/) shows which claims need stronger evidence.
+- [Assumptions register](/evidence/assumptions/) records beliefs that may need to become decisions.
+- [Concepts](/concepts/) and [Glossary and terminology history](/concepts/glossary/) define the language used in decisions.
+- [Timeline](/timeline/) shows when important design positions emerged.
+
 ## Initial decision records
 
-- [001: Intent Capture is not triage](/decisions/001-intent-capture-is-not-triage/)
-- [002: Use a conversation-first interaction model](/decisions/002-conversation-first-interaction/)
-- [003: Show the seams of AI](/decisions/003-show-the-seams-of-ai/)
+| ID | Decision | Status | Related topic |
+|---|---|---|---|
+| 001 | [Intent Capture is not triage](/decisions/001-intent-capture-is-not-triage/) | Accepted | Scope and clinical safety |
+| 002 | [Use a conversation-first interaction model](/decisions/002-conversation-first-interaction/) | Proposed | Interaction model |
+| 003 | [Show the seams of AI](/decisions/003-show-the-seams-of-ai/) | Proposed | Trust and transparency |
+
+## Likely future decision records
+
+These topics appear in the [claims and evidence index](/evidence/claims/) or [assumptions register](/evidence/assumptions/) and may need decision records if they become material to product direction:
+
+- users should always have a non-AI route
+- Intent Capture should support orchestration rather than become a standalone destination
+- emergency presentations should move to safer routes early
+- structured intent should be available for downstream services
+- the NHS App is a possible strategic entry point, but not the only possible placement
