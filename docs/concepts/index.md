@@ -7,6 +7,13 @@ permalink: /concepts/
 
 This section defines the terms used across the design history. These definitions should remain stable enough to support shared understanding, but they may change as the programme learns more.
 
+## Related concept pages
+
+- [Glossary and terminology history](/concepts/glossary/) gives shorter working definitions and records terms that have changed.
+- [Architecture](/concepts/architecture/) explains how Intent Capture relates to navigation, orchestration and onward NHS services.
+- [Decision records](/decisions/) capture material choices that affect scope, safety, interaction and architecture.
+- [Claims and evidence index](/evidence/claims/) tracks which claims are established, emerging or still hypotheses.
+
 ## Working definitions
 
 ### Intent
@@ -19,11 +26,13 @@ An intent may involve a symptom, but it is not the same as a symptom. For exampl
 
 Intent Capture is the capability to understand a person's goal, need or problem well enough to help them move to an appropriate next step.
 
-It may involve free text, structured questions, clarification and handover into another service or pathway.
+It may involve free text, structured questions, clarification and handover into another service or pathway. See also [Architecture](/concepts/architecture/).
 
 ### Triage
 
 Triage is the process of assessing clinical urgency or priority. Intent Capture may identify that someone needs triage, but it should not be treated as triage itself unless the service is explicitly designed, governed and clinically assured to do that.
+
+See also the decision record [Intent Capture is not triage](/decisions/001-intent-capture-is-not-triage/).
 
 ### Navigation
 
@@ -33,7 +42,7 @@ Navigation is helping someone move through the NHS system. It includes signposti
 
 Orchestration is the system capability that coordinates movement between services, channels, rules, pathways and responsibilities.
 
-Intent Capture can provide structured understanding that helps orchestration work better.
+Intent Capture can provide structured understanding that helps orchestration work better. This is described further in [Architecture](/concepts/architecture/).
 
 ### Intelligent Navigation
 
@@ -41,4 +50,4 @@ Intelligent Navigation is broader than Intent Capture. It describes the wider ca
 
 ## Editorial note
 
-Where terms are uncertain or contested, design history posts should record how the terminology changed over time rather than silently replacing earlier language.
+Where terms are uncertain or contested, design history posts should record how the terminology changed over time rather than silently replacing earlier language. See [Glossary and terminology history](/concepts/glossary/) for naming changes.
