@@ -11,6 +11,13 @@ This glossary records the terms used in the AI Intent Capture design history. It
 
 Use these definitions when writing design history posts, decision records and evidence notes. Where a term is still contested, say so explicitly.
 
+Related pages:
+
+- [Concepts](/concepts/) gives fuller explanations of the core ideas.
+- [Architecture](/concepts/architecture/) explains how the terms relate in the working system model.
+- [Timeline](/timeline/) records how the language changed over time.
+- [Decision records](/decisions/) capture material terminology and scope choices.
+
 ## Current terms
 
 ### Access
@@ -59,7 +66,7 @@ What a person is trying to do, express, resolve or understand at a particular po
 
 ### Intent Capture
 
-The capability to understand a person's goal, need or problem well enough to support an appropriate next step.
+The capability to understand a person's goal, need or problem well enough to support an appropriate next step. See [Architecture](/concepts/architecture/) for the working model.
 
 ### Intelligent Navigation
 
@@ -75,7 +82,7 @@ An alternative route that allows someone to continue without using an AI-support
 
 ### Orchestration
 
-The system capability that coordinates movement between services, channels, rules, pathways and responsibilities.
+The system capability that coordinates movement between services, channels, rules, pathways and responsibilities. See [Architecture](/concepts/architecture/) for the relationship between Intent Capture and orchestration.
 
 ### Pathway
 
@@ -95,7 +102,7 @@ A representation of a user's intent in a form that can be passed to another serv
 
 ### Triage
 
-A process for assessing clinical urgency or priority. Intent Capture may identify that triage is needed, but it is not itself triage unless explicitly designed and assured as such.
+A process for assessing clinical urgency or priority. Intent Capture may identify that triage is needed, but it is not itself triage unless explicitly designed and assured as such. See [Intent Capture is not triage](/decisions/001-intent-capture-is-not-triage/).
 
 ## Terms that have changed
 

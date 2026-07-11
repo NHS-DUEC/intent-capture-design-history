@@ -18,6 +18,13 @@ Evidence may include:
 - clinical safety input
 - product or policy decisions
 
+## Evidence pages
+
+- [Claims and evidence index](/evidence/claims/) connects important claims to evidence levels, supporting artefacts, gaps and next validation steps.
+- [Assumptions register](/evidence/assumptions/) captures working assumptions that need evidence, challenge or decisions.
+- [Timeline](/timeline/) records how the work has changed over time and where evidence still needs to be added.
+- [Decision records](/decisions/) record choices that should be linked back to claims and assumptions where relevant.
+
 ## Evidence levels
 
 Use the following labels when writing or reviewing content:
@@ -50,4 +57,4 @@ A material uncertainty that still needs a decision, evidence or further explorat
 
 ## Next step
 
-Create a more detailed evidence index that maps claims to specific posts, recordings, workshops, decisions and artefacts.
+Use the [claims and evidence index](/evidence/claims/) to map these topics to specific posts, recordings, workshops, decision records and artefacts.
