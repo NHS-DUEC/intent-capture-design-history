@@ -92,15 +92,22 @@
     {{ content }}
   {% endcall %}
 
-  {% if showPagination %}
-    {% set previous = collections.navigation | eleventyNavigation(sectionKey or options.homeKey) | getPreviousNavigationItem(page.url) %}
-    {% set next = collections.navigation | eleventyNavigation(sectionKey or options.homeKey) | getNextNavigationItem(page.url) %}
+  {% set previous = collections.posts | getPreviousCollectionItem(page) %}
+  {% set next = collections.posts | getNextCollectionItem(page) %}
+  {% if previous or next %}
     {{ nhsukPagination({
       classes: "nhsuk-u-reading-width",
-      previousUrl: previous.url if previous,
-      previousPage: previous.title if previous,
-      nextUrl: next.url if next,
-      nextPage: next.title if next
+      landmarkLabel: "Post navigation",
+      previous: {
+        href: previous.url,
+        text: "Back",
+        labelText: previous.data.title
+      } if previous,
+      next: {
+        href: next.url,
+        text: "Next",
+        labelText: next.data.title
+      } if next
     }) }}
   {% endif %}
 
