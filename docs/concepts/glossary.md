@@ -9,14 +9,13 @@ This glossary records the terms used in the AI Intent Capture design history. It
 
 ## How to use this glossary
 
-Use these definitions when writing design history posts, decision records and evidence notes. Where a term is still contested, say so explicitly.
+Use these definitions when writing design history posts. Where a term is still contested, say so explicitly.
 
 Related pages:
 
 - [Concepts](/concepts/) gives fuller explanations of the core ideas.
 - [Architecture](/concepts/architecture/) explains how the terms relate in the working system model.
-- [Timeline](/timeline/) records how the language changed over time.
-- [Decision records](/decisions/) capture material terminology and scope choices.
+- [Decisions shaping Intent Capture](/posts/2026-09-09-decisions-shaping-intent-capture/) explains the reasoning behind scope and interaction choices.
 
 ## Current terms
 
@@ -102,7 +101,7 @@ A representation of a user's intent in a form that can be passed to another serv
 
 ### Triage
 
-A process for assessing clinical urgency or priority. Intent Capture may identify that triage is needed, but it is not itself triage unless explicitly designed and assured as such. See [Intent Capture is not triage](/decisions/001-intent-capture-is-not-triage/).
+A process for assessing clinical urgency or priority. Intent Capture may identify that triage is needed, but it is not itself triage unless explicitly designed and assured as such. See [Intent Capture is not triage](/posts/2026-09-09-decisions-shaping-intent-capture/#intent-capture-is-not-triage).
 
 ## Terms that have changed
 

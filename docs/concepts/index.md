@@ -11,8 +11,7 @@ This section defines the terms used across the design history. These definitions
 
 - [Glossary and terminology history](/concepts/glossary/) gives shorter working definitions and records terms that have changed.
 - [Architecture](/concepts/architecture/) explains how Intent Capture relates to navigation, orchestration and onward NHS services.
-- [Decision records](/decisions/) capture material choices that affect scope, safety, interaction and architecture.
-- [Claims and evidence index](/evidence/claims/) tracks which claims are established, emerging or still hypotheses.
+- [Decisions shaping Intent Capture](/posts/2026-09-09-decisions-shaping-intent-capture/) explains material choices that affect scope, safety, interaction and architecture.
 
 ## Working definitions
 
@@ -32,7 +31,7 @@ It may involve free text, structured questions, clarification and handover into 
 
 Triage is the process of assessing clinical urgency or priority. Intent Capture may identify that someone needs triage, but it should not be treated as triage itself unless the service is explicitly designed, governed and clinically assured to do that.
 
-See also the decision record [Intent Capture is not triage](/decisions/001-intent-capture-is-not-triage/).
+See also [Intent Capture is not triage](/posts/2026-09-09-decisions-shaping-intent-capture/#intent-capture-is-not-triage).
 
 ### Navigation
 

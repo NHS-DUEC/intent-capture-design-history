@@ -14,22 +14,18 @@ The work is concerned with a difficult design problem: people often arrive with 
 If you are new to the work, start with:
 
 - [Design history posts](/posts/) for the chronological story of what changed and why
-- [Timeline](/timeline/) for the main shifts in the work from May 2026 onwards
 - [User needs](/userneeds/) for the user needs the work is trying to satisfy
-- [Decision records](/decisions/) for significant design and programme decisions
+- [Decisions shaping Intent Capture](/posts/2026-09-09-decisions-shaping-intent-capture/) for significant design and programme decisions
 - [Concepts](/concepts/) for definitions of terms such as intent, triage, navigation and orchestration
 - [Glossary and terminology history](/concepts/glossary/) for working definitions and naming changes
 - [Architecture](/concepts/architecture/) for the emerging model of how Intent Capture relates to orchestration and onward services
-- [Evidence](/evidence/) for evidence levels, claims and assumptions
-- [Roadmap](/roadmap/) for open questions and future documentation work
 
 ## How to read this design history
 
-This repository has three layers:
+This design history combines posts and reference pages:
 
-1. **Chronological posts and timeline** describe how the work has changed over time.
+1. **Chronological posts** describe what changed, the decisions behind it and their consequences.
 2. **Reference pages** define stable concepts, principles, architecture and terminology.
-3. **Decision records, claims and assumptions** explain important choices, evidence gaps and consequences.
 
 Some content records agreed decisions. Some records working assumptions or hypotheses. Where something is not yet settled, the page should say so explicitly.
 

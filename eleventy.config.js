@@ -15,12 +15,8 @@ export default function (eleventyConfig) {
         items: [
           { text: 'Home', href: '/' },
           { text: 'Posts', href: '/posts/' },
-          { text: 'Timeline', href: '/timeline/' },
           { text: 'User needs', href: '/userneeds/' },
-          { text: 'Decisions', href: '/decisions/' },
-          { text: 'Concepts', href: '/concepts/' },
-          { text: 'Evidence', href: '/evidence/' },
-          { text: 'Roadmap', href: '/roadmap/' }
+          { text: 'Concepts', href: '/concepts/' }
         ]
       }
     }
