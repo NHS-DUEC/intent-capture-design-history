@@ -1,6 +1,8 @@
 ---
 title: Drawing up test-and-learn criteria for Ask the NHS
 date: 2026-09-17T16:18:00.000+01:00
+author:
+  - Jeffrey Miller
 layout: post
 ---
 Drawing up test-and-learn criteria for Ask the NHS In recent weeks the team has sharpened its focus on how we can launch a test-and-learn pilot for Ask the NHS within this financial year. 
