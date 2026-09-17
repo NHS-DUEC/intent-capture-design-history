@@ -1,7 +1,7 @@
 ---
 homepage: true
 layout: home
-title: AI Intent Capture design history
+title: Ask the NHS (AI Intent Capture) design history
 description: This site documents the design decisions, iterations, assumptions and evidence behind AI Intent Capture.
 ---
 
