@@ -1,6 +1,8 @@
 ---
 title: Drawing up test-and-learn criteria for Ask the NHS
 date: 2026-09-17T16:18:00.000+01:00
+description: The fundamental questions we need to answer about to shape what
+  features we include in the first release
 author:
   - Jeffrey Miller
 layout: post
