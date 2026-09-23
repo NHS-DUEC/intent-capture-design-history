@@ -28,6 +28,37 @@ export default function (eleventyConfig) {
     'node_modules/decap-cms/dist/decap-cms.js': 'decap-cms/decap-cms.js',
   })
 
+  eleventyConfig.addPassthroughCopy({
+    'node_modules/mermaid/dist/mermaid.min.js': 'assets/mermaid.min.js',
+  })
+
+  // Render ```mermaid fences as diagrams rather than highlighted code
+  eleventyConfig.amendLibrary('md', (md) => {
+    const fence = md.renderer.rules.fence
+    md.renderer.rules.fence = (tokens, idx, options, env, self) => {
+      const token = tokens[idx]
+      if (token.info.trim() !== 'mermaid') {
+        return fence(tokens, idx, options, env, self)
+      }
+      return `<pre class="mermaid app-mermaid">${md.utils.escapeHtml(token.content)}</pre>\n`
+    }
+  })
+
+  // Only load Mermaid on pages that contain a diagram. This runs after the
+  // HTML base plugin, so the path prefix has to be added here.
+  const mermaidSrc = `${process.env.GITHUB_ACTIONS ? site.pathPrefix : ''}/assets/mermaid.min.js`
+  eleventyConfig.addTransform('mermaid', function (content) {
+    if (!this.page.outputPath?.endsWith('.html') || !content.includes('class="mermaid')) {
+      return content
+    }
+    return content.replace(
+      '</body>',
+      `<script src="${mermaidSrc}"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral', fontFamily: '"Frutiger W01", arial, sans-serif' })</script>
+</body>`
+    )
+  })
+
   eleventyConfig.addFilter('needId', (n) => `UN${String(n).padStart(3, '0')}`)
 
   eleventyConfig.addFilter('resolveAuthors', function (author, authorsData) {

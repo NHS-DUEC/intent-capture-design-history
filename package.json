@@ -31,6 +31,7 @@
     "@x-govuk/nhsuk-eleventy-plugin": "^1.2.1",
     "concurrently": "^10.0.3",
     "decap-cms": "^3.6.4",
-    "decap-server": "^3.7.0"
+    "decap-server": "^3.7.0",
+    "mermaid": "^12.0.0"
   }
 }

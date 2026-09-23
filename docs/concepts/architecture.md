@@ -34,7 +34,7 @@ flowchart TD
 ## Capability model
 
 ```mermaid
-flowchart LR
+flowchart TD
   A[Entry points] --> B[Intent Capture]
   B --> C[Structured intent]
   C --> D[Orchestration rules and services]
