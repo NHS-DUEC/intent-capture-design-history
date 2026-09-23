@@ -1,38 +1,62 @@
 {% extends "layouts/base.njk" %}
 
-{% block content %}
+{% from "nhsuk/components/card/macro.njk" import card as nhsukCard %}
 
-  {{
-    appDocumentHeader({
-        caption: caption,
-        title: title,
-        description: description
-    })
-  }}
+{% block main %}
+  {{ appHero({
+    title: title,
+    description: description
+  }) }}
 
-  {% if content | trim %}
-    <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-two-thirds">
-        {{ content | safe }}
-      </div>
+  <main class="nhsuk-main-wrapper" id="maincontent">
+    <div class="nhsuk-width-container">
+      {% if content | trim %}
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-two-thirds">
+            {{ content | safe }}
+          </div>
+        </div>
+      {% endif %}
+
+      <h2 class="nhsuk-heading-l">Latest posts</h2>
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+        {% for post in collections.posts | reverse | sliceFromCollection(3) %}
+          {% set postDescription %}
+            <p class="nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-bottom-2">
+              <time datetime="{{ post.date | isoDate }}">{{ post.date | nhsukDate }}</time>
+            </p>
+            {% if post.data.description %}<p class="nhsuk-card__description">{{ post.data.description }}</p>{% endif %}
+          {% endset %}
+          <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+            {{ nhsukCard({
+              href: post.url,
+              heading: post.data.title,
+              headingClasses: "nhsuk-u-font-size-22 nhsuk-u-margin-bottom-2",
+              headingLevel: 3,
+              descriptionHtml: postDescription
+            }) }}
+          </li>
+        {% endfor %}
+      </ul>
+      <p class="nhsuk-body"><a class="nhsuk-link" href="/posts/">View all posts</a></p>
+
+      {% for group in groups %}
+        <h2 class="nhsuk-heading-l">{{ group.title }}</h2>
+        <ul class="nhsuk-grid-row nhsuk-card-group">
+          {% for item in group.items %}
+            <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+              {{ nhsukCard({
+                secondary: true,
+                href: item.href,
+                heading: item.title,
+                headingClasses: "nhsuk-u-font-size-22 nhsuk-u-margin-bottom-2",
+                headingLevel: 3,
+                description: item.description
+              }) }}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
     </div>
-  {% endif %}
-
-  {{
-    appDocumentList({
-        headingLevel: 2,
-        items: collections.posts | reverse | sliceFromCollection(10)
-    })
-  }}
-
-  {{
-    appRelated({
-        title: "All posts",
-        items: [{
-            text: "View all posts",
-            href: "/posts/"
-        }]
-    })
-  }}
-
+  </main>
 {% endblock %}
