@@ -112,6 +112,56 @@ collections:
       - { label: Layout, name: layout, widget: hidden, default: post }
       - { label: Body, name: body, widget: markdown }
 
+  - name: glossary
+    label: Glossary
+    label_singular: Glossary term
+    folder: docs/glossary
+    create: true
+    identifier_field: term
+    slug: "{{term}}"
+    summary: "{{term}}"
+    sortable_fields: [term, status]
+    preview_path: concepts/glossary/{{slug}}
+    media_folder: /docs/images/glossary
+    public_folder: /images/glossary
+    fields:
+      - { label: Term, name: term, widget: string, hint: "The term's web address is created from this when you first save it." }
+      - label: Status
+        name: status
+        widget: select
+        default: current
+        options:
+          - { label: Current term, value: current }
+          - { label: Term that has changed, value: previous }
+          - { label: Term to use carefully, value: use-carefully }
+      - { label: Definition, name: body, widget: markdown }
+      - { label: Terminology history, name: history, widget: markdown, required: false, hint: "Optional. How and why use of this term has changed." }
+      - { label: Image, name: image, widget: image, required: false }
+      - { label: Image alternative text, name: imageAlt, widget: string, required: false, hint: "Describe the image for people who cannot see it. Leave blank if it is decorative." }
+      - { label: Image caption, name: imageCaption, widget: string, required: false }
+      - label: Related terms
+        name: related
+        widget: relation
+        collection: glossary
+        search_fields: [term]
+        value_field: "{{slug}}"
+        display_fields: [term]
+        multiple: true
+        required: false
+
+  - name: pages
+    label: Pages
+    files:
+      - label: Glossary introduction
+        name: glossary-page
+        file: docs/concepts/glossary.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Description, name: description, widget: string, required: false }
+          - { label: Layout, name: layout, widget: hidden, default: glossary }
+          - { label: Permalink, name: permalink, widget: hidden, default: /concepts/glossary/ }
+          - { label: Introduction, name: body, widget: markdown, hint: "Shown above the list of terms. Terms are managed in the Glossary collection." }
+
 `
   }
 }

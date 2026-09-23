@@ -1,0 +1,38 @@
+{% extends "layouts/base.njk" %}
+
+{% set groups = [
+  { status: "current", title: "Current terms" },
+  { status: "previous", title: "Terms that have changed" },
+  { status: "use-carefully", title: "Terms to use carefully" }
+] %}
+
+{% block content %}
+  {{ appDocumentHeader({
+    title: title,
+    description: description
+  }) }}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      {{ content | safe }}
+
+      {% for group in groups %}
+        {% set terms = [] %}
+        {% for item in collections.glossary | sort(false, false, "data.term") %}
+          {% if item.data.status == group.status %}
+            {% set terms = (terms.push(item), terms) %}
+          {% endif %}
+        {% endfor %}
+        {% if terms | length %}
+          <h2 class="nhsuk-heading-l">{{ group.title }}</h2>
+          {% for item in terms %}
+            <h3 class="nhsuk-heading-m" id="{{ item.page.fileSlug }}">
+              <a href="{{ item.url }}">{{ item.data.term }}</a>
+            </h3>
+            {{ item.content | safe }}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

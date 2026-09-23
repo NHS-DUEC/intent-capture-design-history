@@ -1,0 +1,58 @@
+{% extends "layouts/base.njk" %}
+
+{% from "nhsuk/components/inset-text/macro.njk" import insetText as nhsukInsetText %}
+{% from "nhsuk/components/back-link/macro.njk" import backLink as nhsukBackLink %}
+
+{% block beforeContent %}
+  {{ nhsukBackLink({
+    href: "/concepts/glossary/",
+    text: "Back to glossary"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  {{ appDocumentHeader({
+    caption: "Glossary",
+    title: term
+  }) }}
+
+  {% call appProseScope() %}
+    {% if status == "previous" %}
+      {{ nhsukInsetText({
+        text: "This is a previous term. It is recorded here to explain how our language has changed."
+      }) }}
+    {% elif status == "use-carefully" %}
+      {{ nhsukInsetText({
+        text: "Use this term carefully."
+      }) }}
+    {% endif %}
+
+    {{ nhsukImage({
+      classes: "app-image--full",
+      src: image,
+      alt: imageAlt or "",
+      caption: imageCaption | markdown("inline") if imageCaption
+    }) if image }}
+
+    {{ content | safe }}
+
+    {% if history %}
+      <h2 class="nhsuk-heading-m">Terminology history</h2>
+      {{ history | markdown | safe }}
+    {% endif %}
+  {% endcall %}
+
+  {% set relatedItems = [] %}
+  {% for slug in related or [] %}
+    {% for item in collections.glossary %}
+      {% if item.page.fileSlug == slug %}
+        {% set relatedItems = (relatedItems.push({ text: item.data.term, href: item.url }), relatedItems) %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+
+  {{ appRelated({
+    title: "Related terms",
+    items: relatedItems
+  }) if relatedItems | length }}
+{% endblock %}
