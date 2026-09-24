@@ -11,6 +11,10 @@ export default function (eleventyConfig) {
       logo: {
         href: '/'
       },
+      service: {
+        text: 'Ask the NHS - Design history',
+        href: '/'
+      },
       navigation: {
         items: [
           { text: 'Home', href: '/' },
