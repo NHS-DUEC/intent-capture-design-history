@@ -18,7 +18,7 @@ We had also considered "Tell us how we can help". The concern was that this word
 This is a working name, rather than a final naming decision or a research finding that it performs better than the alternatives. We still need to understand what people expect from it and whether the surrounding content explains the service clearly enough. In the research prototype, the introductory page explains that the tool uses AI to find NHS services and information, does not access medical records, and offers an option not to use it. The name and that explanation need to work together so people understand what they are choosing to use.
 
 <figure class="nhsuk-image">
-  <img class="nhsuk-image__img" src="/images/intent-capture-research/ask-the-nhs-research-input.webp" alt="Ask the NHS prototype in an NHS App phone frame, with an explanation of AI use, a concern text field, a Continue button and an option not to use the tool." width="1836" height="1836" loading="lazy" decoding="async">
+  <img class="nhsuk-image__img" src="images/ask-the-nhs-research-input.webp" alt="Ask the NHS prototype in an NHS App phone frame, with an explanation of AI use, a concern text field, a Continue button and an option not to use the tool." width="1836" height="1836" loading="lazy" decoding="async">
   <figcaption class="nhsuk-image__caption">The prototype taken to research: asking people to describe their concern in their own words.</figcaption>
 </figure>
 
@@ -29,7 +29,7 @@ The research review gave us some encouraging findings. Participants were general
 The results also exposed weaknesses. Generic recommendations could quickly reduce confidence. Participants often associated "111" with an urgent telephone call, even when the intended destination was 111 online. We need to make the next step clearer and explain how it relates to what the person has told us.
 
 <figure class="nhsuk-image">
-  <img class="nhsuk-image__img" src="/images/intent-capture-research/ask-the-nhs-research-outcome.webp" alt="Prototype outcome screen headed What to do next, recommending a headache symptom check through 111 online, with a second card for NHS headache advice partly visible." width="1758" height="1758" loading="lazy" decoding="async">
+  <img class="nhsuk-image__img" src="images/ask-the-nhs-research-outcome.webp" alt="Prototype outcome screen headed What to do next, recommending a headache symptom check through 111 online, with a second card for NHS headache advice partly visible." width="1758" height="1758" loading="lazy" decoding="async">
   <figcaption class="nhsuk-image__caption">An example outcome from the research prototype, showing a recommended 111 online route and NHS information.</figcaption>
 </figure>
 

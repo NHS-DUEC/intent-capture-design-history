@@ -35,7 +35,7 @@ display_url: ${siteUrl}/
 logo_url: ${pathPrefix}/admin/nhs-logo.png
 
 media_folder: docs/images
-public_folder: /images
+public_folder: images
 
 collections:
   - name: user-types
@@ -84,7 +84,7 @@ collections:
     format: json
     extension: json
     media_folder: /docs/images/authors
-    public_folder: /images/authors
+    public_folder: images/authors
     fields:
       - { label: Name, name: name, widget: string }
       - { label: Role, name: role, widget: string, required: false }
@@ -110,7 +110,7 @@ collections:
         required: false
         multiple: true
       - { label: Layout, name: layout, widget: hidden, default: post }
-      - { label: Body, name: body, widget: markdown }
+      - { label: Body, name: body, widget: markdown, sanitize_preview: false }
 
   - name: glossary
     label: Glossary
@@ -123,7 +123,7 @@ collections:
     sortable_fields: [term, status]
     preview_path: concepts/glossary/{{slug}}
     media_folder: /docs/images/glossary
-    public_folder: /images/glossary
+    public_folder: images/glossary
     fields:
       - { label: Term, name: term, widget: string, hint: "The term's web address is created from this when you first save it." }
       - label: Status
@@ -134,8 +134,8 @@ collections:
           - { label: Current term, value: current }
           - { label: Term that has changed, value: previous }
           - { label: Term to use carefully, value: use-carefully }
-      - { label: Definition, name: body, widget: markdown }
-      - { label: Terminology history, name: history, widget: markdown, required: false, hint: "Optional. How and why use of this term has changed." }
+      - { label: Definition, name: body, widget: markdown, sanitize_preview: false }
+      - { label: Terminology history, name: history, widget: markdown, sanitize_preview: false, required: false, hint: "Optional. How and why use of this term has changed." }
       - { label: Image, name: image, widget: image, required: false }
       - { label: Image alternative text, name: imageAlt, widget: string, required: false, hint: "Describe the image for people who cannot see it. Leave blank if it is decorative." }
       - { label: Image caption, name: imageCaption, widget: string, required: false }
@@ -160,7 +160,7 @@ collections:
           - { label: Description, name: description, widget: string, required: false }
           - { label: Layout, name: layout, widget: hidden, default: glossary }
           - { label: Permalink, name: permalink, widget: hidden, default: /concepts/glossary/ }
-          - { label: Introduction, name: body, widget: markdown, hint: "Shown above the list of terms. Terms are managed in the Glossary collection." }
+          - { label: Introduction, name: body, widget: markdown, sanitize_preview: false, hint: "Shown above the list of terms. Terms are managed in the Glossary collection." }
 
 `
   }

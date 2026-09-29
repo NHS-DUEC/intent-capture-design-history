@@ -36,6 +36,13 @@ export default function (eleventyConfig) {
     'node_modules/mermaid/dist/mermaid.min.js': 'assets/mermaid.min.js',
   })
 
+  // Content stores images as images/... (no leading slash) so Decap loads them
+  // through its backend. Make them site-root URLs; this runs before the HTML
+  // base plugin, which then adds the path prefix.
+  eleventyConfig.htmlTransformer.addUrlTransform('html', (url) =>
+    url.startsWith('images/') ? `/${url}` : url
+  )
+
   // Render ```mermaid fences as diagrams rather than highlighted code
   eleventyConfig.amendLibrary('md', (md) => {
     const fence = md.renderer.rules.fence

@@ -7,5 +7,78 @@
   </head>
   <body>
     <script src="../decap-cms/decap-cms.js"></script>
+    <script>
+      const escapeHtml = (value = '') =>
+        String(value)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+
+      const unescapeHtml = (value = '') =>
+        String(value)
+          .replace(/&quot;/g, '"')
+          .replace(/&gt;/g, '>')
+          .replace(/&lt;/g, '<')
+          .replace(/&amp;/g, '&')
+
+      const attribute = (attributes, name) =>
+        unescapeHtml(attributes.match(new RegExp(`\\b${name}="([^"]*)"`))?.[1] ?? '')
+
+      function figureHtml({ src, alt, caption, width, height }) {
+        const size = width && height ? ` width="${escapeHtml(width)}" height="${escapeHtml(height)}"` : ''
+        const figcaption = caption
+          ? `\n  <figcaption class="nhsuk-image__caption">${escapeHtml(caption)}</figcaption>`
+          : ''
+        return `<figure class="nhsuk-image">
+  <img class="nhsuk-image__img" src="${escapeHtml(src)}" alt="${escapeHtml(alt)}"${size} loading="lazy" decoding="async">${figcaption}
+</figure>`
+      }
+
+      // NHS.UK image with caption, stored as the nhsuk-image figure markup
+      CMS.registerEditorComponent({
+        id: 'nhsuk-image',
+        label: 'Image with caption',
+        fields: [
+          { name: 'image', label: 'Image', widget: 'image' },
+          {
+            name: 'alt',
+            label: 'Alternative text',
+            widget: 'string',
+            required: false,
+            hint: 'Describe the image for people who cannot see it. Leave blank if it is decorative.'
+          },
+          { name: 'caption', label: 'Caption', widget: 'string', required: false }
+        ],
+        pattern:
+          /^<figure class="nhsuk-image">\s*<img ([^>]*)>\s*(?:<figcaption class="nhsuk-image__caption">([\s\S]*?)<\/figcaption>\s*)?<\/figure>/,
+        fromBlock(match) {
+          const image = attribute(match[1], 'src')
+          return {
+            image,
+            alt: attribute(match[1], 'alt'),
+            caption: unescapeHtml(match[2]?.trim() ?? ''),
+            // Keep hand-set dimensions, but only while the same image is used
+            width: attribute(match[1], 'width'),
+            height: attribute(match[1], 'height'),
+            sizedImage: image
+          }
+        },
+        toBlock({ image, alt, caption, width, height, sizedImage }) {
+          const keepSize = image && image === sizedImage
+          return figureHtml({
+            src: image,
+            alt,
+            caption,
+            width: keepSize ? width : '',
+            height: keepSize ? height : ''
+          })
+        },
+        toPreview({ image, alt, caption }, getAsset, fields) {
+          const imageField = fields?.find((field) => field.get('widget') === 'image')
+          return figureHtml({ src: getAsset(image, imageField)?.toString() ?? '', alt, caption })
+        }
+      })
+    </script>
   </body>
 </html>
