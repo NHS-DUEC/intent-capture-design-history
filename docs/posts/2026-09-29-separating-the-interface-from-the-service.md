@@ -12,6 +12,8 @@ We are exploring how Ask the NHS could help people describe what they need in th
 
 Over the past week, our discussions have moved towards a clear architectural direction: separate the front end (the interface people use) from the underlying Ask the NHS logic and infrastructure.
 
+![A website pilot connects to a shared Ask the NHS service, with dotted connections showing possible future reuse by the NHS App and other interfaces.](/images/frontend-example.png)
+
 ## Balancing early delivery with future flexibility
 
 Our initial discussions reflected a familiar tension. We want to deliver something useful quickly, but decisions made for an MVP can remain in place much longer than intended.
