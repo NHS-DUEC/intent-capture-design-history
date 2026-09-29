@@ -54,7 +54,9 @@ The precise entry point and integration pattern are yet to be determined and we 
 
 Separating the front end from the back end gives us more freedom to reconsider the implementation.
 
-An exploratory spike suggested that adapting NHS.uk Frontend components to .NET Razor templates was more feasible than initially expected. A subsequent discussion raised a concern about .NET’s position on the technology radar, which needs checking with the team. React was mentioned as one possible approach to an embedded interface, but no framework has been selected.
+An exploratory spike suggested that adapting [NHS.uk Frontend components to .NET Razor templates was more feasible than initially expected](https://nhsuk-frontend-dotnet-840203fe3bdb.herokuapp.com/). 
+
+A subsequent discussion raised a concern about .NET’s position on the official technology radar, which needs checking with the team. React was mentioned as one possible approach to an embedded interface, but no framework has been selected.
 
 We also need to establish how analytics will work across the NHS website and Ask the NHS. We want to understand how people enter the journey, how they interact with it and where they go afterwards.
 
